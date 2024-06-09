@@ -1,5 +1,111 @@
 <template>
   <div class="page" data-name="home">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="left panel-open"><i class="f7-icons">bars</i></div>
+        <div class="title">Latihan 3</div>
+        <div class="right">Right</div>
+      </div>
+    </div>
+
+    <div class="panel panel-left">
+      <div class="list">
+        <ul>
+          <li>
+            <a class="item-content item-link">
+              <div class="item-media"><i class="f7-icons">house</i></div>
+              <div class="item-inner">
+                <div class="item-title">Beranda</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="item-content item-link">
+              <div class="item-media"><i class="f7-icons">info</i></div>
+              <div class="item-inner">
+                <div class="item-title">Info</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <a href="" class="button panel-close"><i class="f7-icons">xmark</i></a>
+      </div>
+    </div>
+    <div class="page-content">
+
+      <div class="block">
+        <div class="list list-strong-ios list-dividers-ios inset-ios">
+          <ul>
+            <li class="item-content item-input item-input-outline">
+              <div class="item-media">
+                <i class="f7-icons">textformat_abc</i>
+              </div>
+              <div class="item-inner">
+                <div class="item-title item-label">Nama Lengkap</div>
+                <div class="item-input-wrap">
+                  <input type="text" placeholder="Nama Kamu" />
+                  <span class="input-clear-button"></span>
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input item-input-outline">
+              <div class="item-media">
+                <i class="f7-icons">textformat_abc</i>
+              </div>
+              <div class="item-inner">
+                <div class="item-title item-label">Jenis Kelamin</div>
+                <div class="item-input-wrap input-dropdown-wrap">
+                  <select placeholder="Please choose...">
+                    <option value="Male">Laki laki</option>
+                    <option value="Female">Perempuan</option>
+                  </select>
+                </div>
+              </div>
+            </li>
+            <button class="button button-outline color-red margin-bottom">Kirim</button>
+          </ul>
+        </div>
+        <button class="button button-fill panel-open">Buka Panel</button>
+        <div class="list simple-list">
+          <ul>
+            <li>List 1</li>
+            <li>List 2</li>
+            <li>List 3</li>
+            <li>List 4</li>
+          </ul>
+        </div>
+        <div class="list list-strong inset">
+          <ul>
+            <li>List 1</li>
+            <li>List 2</li>
+            <li>List 3</li>
+            <li>List 4</li>
+          </ul>
+        </div>
+
+        <div class="list">
+          <ul>
+            <li>
+              <a class="item-content item-link">
+                <div class="item-media"><i class="f7-icons">house</i></div>
+                <div class="item-inner">
+                  <div class="item-title">Beranda</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="item-content item-link">
+                <div class="item-media"><i class="f7-icons">info</i></div>
+                <div class="item-inner">
+                  <div class="item-title">Info</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
