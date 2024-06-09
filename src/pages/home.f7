@@ -1,33 +1,57 @@
 <template>
   <div class="page" data-name="home">
-    <!-- Top Navbar -->
-    <div class="navbar navbar-large">
+
+    <div class="navbar color-green">
       <div class="navbar-bg"></div>
-      <div class="navbar-inner sliding">
-        <div class="title">Latihan1</div>
-        <div class="title-large">
-          <div class="title-large-text">Latihan1</div>
+      <div class="navbar-inner">
+        <div class="left">
+          <a href="" class="link"><i class="f7-icons">arrow_left</i>Back</a>
+        </div>
+        <div class="title">App Latihan 11</div>
+        <div class="right">
+          <a href="" class="link">Right</a>
         </div>
       </div>
     </div>
-    <!-- Toolbar-->
+
+    <!-- Bottom Toolbar -->
     <div class="toolbar toolbar-bottom">
       <div class="toolbar-inner">
-        <a href="#" class="link">Left Link</a>
-        <a href="#" class="link">Right Link</a>
+        <a href="#" class="link"><i class="f7-icons">house</i></a>
+        <a href="#" class="link"><i class="f7-icons">camera</i></a>
+        <a href="#" class="link"><i class="f7-icons">printer</i></a>
+        <a href="#" class="link"><i class="f7-icons">person_crop_square</i></a>
+        <a href="#" class="link"><i class="f7-icons">person</i></a>
+
       </div>
     </div>
-    <!-- Scrollable page content-->
-    <div class="page-content">
-      <div class="block">
-        <p>Here is your blank Framework7 app. Let's see what we have here.</p>
-      </div>
 
+    <div class="page" data-name="home">
+      <div class="page-content bg-color-white">
+        <div class="block">
+          <p class="text-color-red">
+            Selamat belajar Framework 7
+
+          </p>
+          <!-- link as button -->
+          <a class="button button-fill margin-bottom color-red">Button</a>
+
+          <!-- <button> as button -->
+          <button class="button button-fill margin-bottom">Button</button>
+
+          <!-- <input type="submit"> as button -->
+          <input type="submit" class="button button-outline color-teal margin-bottom" value="Button 3" />
+          <i class="f7-icons">bolt</i>
+          <a href="" class="button button-fill color-red">
+            <i class="f7-icons margin-right">cart_fill</i>Keranjang Belanja
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <script>
-export default () => {
-  return $render;
-}
+  export default () => {
+    return $render;
+  }
 </script>
