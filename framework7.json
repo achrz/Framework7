@@ -1,0 +1,19 @@
+{
+  "cwd": "D:\\Framework 7\\Latihan1",
+  "type": [
+    "web",
+    "pwa"
+  ],
+  "name": "Latihan1",
+  "framework": "core",
+  "template": "blank",
+  "bundler": "vite",
+  "cssPreProcessor": false,
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}
