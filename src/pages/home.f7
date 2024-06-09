@@ -1,9 +1,126 @@
 <template>
   <div class="page" data-name="home">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="title">Message Box</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="block">
+        <div class="card card-outline">
+          <div class="card-header">Komponen Dialog</div>
+          <div class="card-content card-content-padding">
+            <button class="button button-fill margin-bottom" @click="${pesan}">Dialog</button>
+            <button class="button button-fill margin-bottom" @click="${pesan2}">Confirm</button>
+            <button class="button button-fill margin-bottom" @click="${pesan3}">Prompt</button>
+          </div>
+        </div>
+        <div class="card card-outline">
+          <div class="card-header">Komponen Toast</div>
+          <div class="card-content card-content-padding">
+            <button class="button button-fill margin-bottom" @click="${toast1}">Toast</button>
+            <button class="button button-fill margin-bottom" @click="${toast2}">Toast Top</button>
+            <button class="button button-fill margin-bottom" @click="${toast3}">Toast Center</button>
+            <button class="button button-fill margin-bottom" @click="${toast4}">Toast Icon</button>
+          </div>
+        </div>
+        <div class="card card-outline">
+          <div class="card-header">Komponen Notifikasi</div>
+          <div class="card-content card-content-padding">
+            <button class="button button-fill margin-bottom" @click="${notif1}">Notifikasi</button>
+            <button class="button button-fill margin-bottom" @click="${notif2}">Notifikasi Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
-  export default () => {
+  export default (props, { $f7 }) => {
+    let t1;
+    let t2;
+    let t3;
+    let t4;
+    let n1;
+    let n2;
+    const pesan = () => {
+      console.log('tombol dialog diklik')
+      $f7.dialog.alert("Halo apa kabar?", "Pesan")
+    }
+    const pesan2 = () => {
+      $f7.dialog.confirm("Yakin Keluar App?", "Informasi", function () {
+        $f7.dialog.alert("Terimakasih", "Pesan")
+      })
+    }
+    const pesan3 = () => {
+      $f7.dialog.prompt("Masukkan Nama", "Informasi", function (nama) {
+        $f7.dialog.confirm("Apakah benar nama anda " + nama + "?", "Informasi", function () {
+          $f7.dialog.alert("Terimakasih " + nama, "Pesan")
+        })
+      })
+    }
+    const toast1 = () => {
+      t1 = $f7.toast.create({
+        text: "Halo, ini adalah sebuah toast",
+        closeTimeout: 1000,
+      })
+      t1.open()
+    }
+    const toast2 = () => {
+      console.log('first')
+      t2 = $f7.toast.create({
+        text: "Halo, ini adalah sebuah toast",
+        closeTimeout: 1000,
+        position: "top"
+      })
+      t2.open()
+      // t2.on('close', function () {
+      //   console.log('tutup')
+      // })
+    }
+    const toast3 = () => {
+      t3 = $f7.toast.create({
+        text: "Halo, ini adalah sebuah toast",
+        closeButton: true,
+        closeButtonText: 'tutup',
+        position: "center"
+      })
+      t3.open()
+    }
+    const toast4 = () => {
+      t4 = $f7.toast.create({
+        text: "Halo, ini adalah sebuah toast",
+        closeTimeout: 1000,
+        icon: '<i class="f7-icons">house</i>',
+        position: "center"
+      })
+      t4.open()
+    }
+
+    const notif1 = () => {
+      n1 = $f7.notification.create({
+        title: 'Ini Notif',
+        titleRightText: 'Just Now',
+        subtitle: 'Ada Notif',
+        text: 'Ini adalah text notif,',
+        closeTimeout: 3000,
+        icon: '<i class="f7-icons">house</i>'
+      })
+      n1.open()
+    }
+    const notif2 = () => {
+      n2 = $f7.notification.create({
+        title: 'Ini Notif',
+        closeButton: true,
+        titleRightText: 'Just Now',
+        subtitle: 'Ada Notif',
+        text: 'Ini adalah text notif,',
+        closeTimeout: 3000,
+        icon: '<i class="f7-icons">house</i>'
+      })
+      n2.open()
+    }
     return $render;
   }
 </script>
