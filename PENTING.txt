@@ -1,0 +1,5 @@
+Pindahkan folder biodata di web server
+Xampp : htdocs
+Laragon : www
+
+hapus file ini jika folder biodata sudah dipindah
