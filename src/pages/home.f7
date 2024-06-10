@@ -1,6 +1,30 @@
 <template>
   <div class="page" data-name="home">
-  </div>
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="title">Home</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="card card-raised">
+        <div class="card-content card-content-padding">
+          <div class="list">
+            <ul>
+              <li class="item-content item-input item-input-outline">
+                <div class="item-inner">
+                  <div class="item-title item-label">Nama</div>
+                  <div class="item-input-wrap">
+                    <input type="text" id="name" />
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 </template>
 <script>
   export default () => {
