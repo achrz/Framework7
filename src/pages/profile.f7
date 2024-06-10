@@ -4,19 +4,22 @@
     <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner">
-        <div class="title">Home</div>
+        <div class="left">
+          <a href="" class="back"><i class="f7-icons">arrow_left</i></a>
+        </div>
+        <div class="title">Profile</div>
       </div>
     </div>
     <div class="page-content">
       <div class="block">
-        <p>Ini halaman home</p>
+        <p>Ini halaman Profile</p>
       </div>
     </div>
     <!-- Bottom Toolbar -->
     <div class="toolbar toolbar-bottom">
       <div class="toolbar-inner">
-        <a href="#" class="link"><i class="f7-icons">house</i></a>
-        <a href="/profile/" class="link"><i class="f7-icons">person</i></a>
+        <a href="/" class="link"><i class="f7-icons">house</i></a>
+        <a href="#" class="link"><i class="f7-icons">person</i></a>
         <a href="/kontak/" class="link"><i class="f7-icons">phone</i></a>
       </div>
     </div>

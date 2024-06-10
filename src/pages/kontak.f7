@@ -1,0 +1,75 @@
+<template>
+  <div class="page" data-name="home">
+
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="left">
+          <a href="" class="back"><i class="f7-icons">arrow_left</i></a>
+        </div>
+        <div class="title">Kontak</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="block">
+        <h3>Kontak Kami</h3>
+
+        <div class="list">
+          <ul>
+            <!-- additional "item-input-outline" class -->
+            <li class="item-content item-input item-input-outline">
+              <div class="item-inner">
+                <div class="item-title item-label">Nama</div>
+                <div class="item-input-wrap">
+                  <input type="text" name="name" />
+                  <span class="input-clear-button"></span>
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input item-input-outline">
+              <div class="item-inner">
+                <div class="item-title item-label">Email</div>
+                <div class="item-input-wrap">
+                  <input type="text" name="name" />
+                  <span class="input-clear-button"></span>
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input item-input-outline">
+              <div class="item-inner">
+                <div class="item-title item-label">Nomor</div>
+                <div class="item-input-wrap">
+                  <input type="text" name="name" />
+                  <span class="input-clear-button"></span>
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input item-input-outline">
+              <div class="item-inner">
+                <div class="item-title item-label">Pesan</div>
+                <div class="item-input-wrap">
+                  <textarea class="resizeable"></textarea>
+                  <span class="input-clear-button"></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="button button-fill color-green">Kirim</button>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom Toolbar -->
+    <div class="toolbar toolbar-bottom">
+      <div class="toolbar-inner">
+        <a href="/" class="link"><i class="f7-icons">house</i></a>
+        <a href="/profile/" class="link"><i class="f7-icons">person</i></a>
+        <a href="#" class="link"><i class="f7-icons">phone</i></a>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default () => {
+    return $render;
+  }
+</script>
