@@ -1,4 +1,8 @@
-# Main Kosongan
+# 6. Tutorial GET JSON Data Framework7 CLI
+
+Pindahkan folder biodata di web server
+Xampp : htdocs
+Laragon : www
 
 ## Framework7 CLI Options
 

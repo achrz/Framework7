@@ -1,9 +1,39 @@
 <template>
   <div class="page" data-name="home">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="title">Belajar JSON</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="block">
+        <div class="list links-list">
+          <ul id="tampil">
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
-  export default () => {
+  export default (props, { $f7, $ }) => {
+    fetch('https://localhost/biodata/data.php', {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => response.json()).then(res => {
+      console.log(res)
+      var temp = ""
+      for (var i in res) {
+        temp += `<li>
+            <a href="#">`+ res[i].nama + `</a>
+            </li>`
+      }
+      console.log(temp)
+      $('#tampil').html(temp);
+    })
     return $render;
   }
 </script>
