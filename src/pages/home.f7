@@ -9,25 +9,46 @@
     <div class="page-content">
       <div class="card card-raised">
         <div class="card-content card-content-padding">
-          <div class="list">
+          <div class="list margin-bottom">
             <ul>
               <li class="item-content item-input item-input-outline">
                 <div class="item-inner">
                   <div class="item-title item-label">Nama</div>
                   <div class="item-input-wrap">
-                    <input type="text" id="name" />
+                    <input type="text" id="nama" />
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input item-input-outline">
+                <div class="item-inner">
+                  <div class="item-title item-label">Hasil Input</div>
+                  <div class="item-input-wrap">
+                    <input type="text" id="hasil" />
                     <span class="input-clear-button"></span>
                   </div>
                 </div>
               </li>
             </ul>
           </div>
+          <button class="button button-fill" @click="${proses}">Kirim</button>
+          <p id="tampil"></p>
         </div>
       </div>
+      <div class="block"><a href="/matematika/" class="button button-fill">Halaman Matematika</a></div>
+      <div class="block"><a href="/diskon/" class="button button-fill color-teal">Halaman Diskon</a></div>
     </div>
+  </div>
 </template>
 <script>
-  export default () => {
+  import $ from 'dom7';
+  export default (props, { $f7 }) => {
+    const proses = () => {
+      var nama = $('#nama').val();
+      // $('#tampil').html(nama);
+      // $f7.dialog.alert("Halo " + nama, "Pesan")
+      $('#hasil').val(nama);
+    }
     return $render;
   }
 </script>

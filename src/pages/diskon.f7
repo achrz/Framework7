@@ -1,0 +1,68 @@
+<template>
+  <div class="page" data-name="matematika">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="left"> <a href="" class="back">Back</a></div>
+        <div class="title">Diskon</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="block">
+        <div class="list margin-bottom">
+          <ul>
+            <li class="item-content item-input item-input-outline">
+              <div class="item-inner">
+                <div class="item-title item-label">Total Belanja</div>
+                <div class="item-input-wrap">
+                  <input type="text" id="total" />
+                  <span class="input-clear-button"></span>
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input item-input-outline">
+              <div class="item-inner">
+                <div class="item-title item-label">Diskon</div>
+                <div class="item-input-wrap">
+                  <input type="text" id="diskon" />
+                  <span class="input-clear-button"></span>
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input item-input-outline">
+              <div class="item-inner">
+                <div class="item-title item-label">Bayar</div>
+                <div class="item-input-wrap">
+                  <input type="text" id="bayar" />
+                  <span class="input-clear-button"></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button class="button button-outline color-red" @click="${diskon}">Hitung Diskon</button>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  import $ from 'dom7';
+  export default (props, { $f7 }) => {
+    const diskon = () => {
+      var total = parseInt($('#total').val());
+      if (total >= 2000000) {
+        var diskon = 0.3 * total
+      } else if (total >= 1000000) {
+        var diskon = 0.2 * total
+      } else if (total >= 500000) {
+        var diskon = 0.1 * total
+      } else {
+        var diskon = 0;
+      }
+      var bayar = total - diskon;
+      $('#diskon').val(diskon);
+      $('#bayar').val(bayar);
+    }
+    return $render;
+  }
+</script>

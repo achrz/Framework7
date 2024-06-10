@@ -1,0 +1,74 @@
+<template>
+  <div class="page" data-name="matematika">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="left"> <a href="" class="back">Back</a></div>
+        <div class="title">Matematika</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="block">
+        <div class="list margin-bottom">
+          <ul>
+            <li class="item-content item-input item-input-outline">
+              <div class="item-inner">
+                <div class="item-title item-label">Bilangan 1</div>
+                <div class="item-input-wrap">
+                  <input type="text" id="bil1" />
+                  <span class="input-clear-button"></span>
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input item-input-outline">
+              <div class="item-inner">
+                <div class="item-title item-label">Bilangan 2</div>
+                <div class="item-input-wrap">
+                  <input type="text" id="bil2" />
+                  <span class="input-clear-button"></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="grid grid-cols-4 grid-gap">
+          <button class="button button-outline color-red" @click="${tambah}">+</button>
+          <button class="button button-outline color-orange" @click="${kurang}">-</button>
+          <button class="button button-outline color-green" @click="${bagi}">/</button>
+          <button class="button button-outline color-purple" @click="${kali}">x</button>
+        </div>
+        <p id="hasil"></p>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  import $ from 'dom7';
+  export default (props, { $f7 }) => {
+    const tambah = () => {
+      var angka1 = parseInt($('#bil1').val());
+      var angka2 = parseInt($('#bil2').val());
+      var hasil = angka1 + angka2
+      $('#hasil').html("Hasil Tambah = " + hasil);
+    }
+    const kurang = () => {
+      var angka1 = parseInt($('#bil1').val());
+      var angka2 = parseInt($('#bil2').val());
+      var hasil = angka1 - angka2
+      $('#hasil').html("Hasil Kurang = " + hasil);
+    }
+    const kali = () => {
+      var angka1 = parseInt($('#bil1').val());
+      var angka2 = parseInt($('#bil2').val());
+      var hasil = angka1 * angka2
+      $('#hasil').html("Hasil Kali = " + hasil);
+    }
+    const bagi = () => {
+      var angka1 = parseInt($('#bil1').val());
+      var angka2 = parseInt($('#bil2').val());
+      var hasil = angka1 / angka2
+      $('#hasil').html("Hasil Bagi = " + hasil);
+    }
+    return $render;
+  }
+</script>
